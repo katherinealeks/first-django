@@ -1,0 +1,218 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'sidebar content';
+    gap: 40px;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 50px 1fr;
+    flex: 1;
+}
+
+h1 {
+    font-weight: 600;
+    color: #48D1E0;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 600;
+    color: #48D1E0;
+}
+
+h3 {
+    font-weight: 600;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.header {
+    grid-area: header;
+}
+
+.logo {
+    height: 30px;
+    width: auto;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    align-self: start;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.sidebar ul {
+    display: grid;
+    list-style: none;
+    padding-left: 0;
+    row-gap: 10px;
+}
+
+.content {
+    grid-area: content;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.item {
+    padding: 5px;
+}
+
+.sidebar a,
+.sidebar a:link,
+.sidebar a:visited {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar a:hover {
+    color: #48D1E0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 100px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.about-text {
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.about-image img {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+.posts-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.post-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.post-card h3 {
+    margin: 10px 10px 0 10px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #48D1E0;
+}
+
+.post-card h4 {
+    margin: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.post-card p {
+    margin: 0 10px 10px 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.footer {
+    margin-left: 30px;
+    width: 200px;
+    color: gray;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 70px;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.post-grid .post-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 5px;
+}
+
+.post-grid .post-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.post-grid .post-text h3 {
+    margin: 0 0 10px 0;
+}
+
+.post-grid .post-text p {
+    color: white;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.post-link {
+    all: unset;
+    display: block;
+    cursor: pointer;
+}
+
+.post-card:hover {
+    background: #cccccc;
+}
+
+.post-card:hover h3,
+.post-card:hover h4 {
+    color: black;
+    font-weight: 800;
+}
+
+.post-card:hover p {
+    color: black;
+    font-weight: 500;
+}
