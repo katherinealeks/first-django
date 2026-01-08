@@ -23,6 +23,7 @@ urlpatterns = [
     path('', main_page),
     path('about/', about),
     path('post/', post),
-#    path('admin/', admin.site.urls),
-
+    path('admin/', admin.site.urls),
+    path('add_testimonial/', add_testimonial_page),
+    path('thanks_page/', thanks_page, name="thanks_page"),
 ]

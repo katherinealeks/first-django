@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+<form action="{% url 'thanks_page' %}" method="POST">
+    {% csrf_token %}
+    <select name="post">
+        {% for p in posts %}
+        <option value="{{p.id}}">{{p.name}}</option>
+        {% endfor %}
+    </select>
+    <label for="user_name"></label>
+    <input name="user_name" id="user_name">
+    <label for="email"></label>
+    <input name="email" id="email">
+    <label for="testimonial"></label>
+    <input name="testimonial" id="testimonial">
+    <button type="submit">Отправить</button>
+</form>
+
+<h2>Отзывы</h2>
+
+{% if testimonials %}
+    <ul>
+    {% for t in testimonials %}
+        <li>
+            <p><strong>{{ t.user_name }}</strong> ({{ t.post.name }})<br>
+            {{ t.testimonial }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Пока нет проверенных отзывов.</p>
+{% endif %}
+
+{% endblock %}

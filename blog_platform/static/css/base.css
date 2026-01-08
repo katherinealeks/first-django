@@ -42,6 +42,10 @@ p {
     color: white;
 }
 
+li {
+    text-color: white;
+}
+
 .header {
     grid-area: header;
 }
