@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <h1>{{ title }}</h1>
@@ -11,18 +12,18 @@
         {% endfor %}
     </select>
     <label for="user_name"></label>
-    <input name="user_name" id="user_name">
+    <input name="user_name" id="user_name" placeholder="Иванов Иван Иванович">
     <label for="email"></label>
-    <input name="email" id="email">
+    <input name="email" id="email" placeholder="ivanov@gmail.com">
     <label for="testimonial"></label>
-    <input name="testimonial" id="testimonial">
+    <input name="testimonial" id="testimonial" placeholder="Текст отзыва...">
     <button type="submit">Отправить</button>
 </form>
 
-<h2>Отзывы</h2>
+<h2 id="testimonial">Отзывы</h2>
 
 {% if testimonials %}
-    <ul>
+    <ul class="testimonials-list">
     {% for t in testimonials %}
         <li>
             <p><strong>{{ t.user_name }}</strong> ({{ t.post.name }})<br>

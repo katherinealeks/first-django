@@ -33,6 +33,13 @@ h2 {
     color: #48D1E0;
 }
 
+h2#testimonial {
+    font-weight: 600;
+    color: #48D1E0;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
 h3 {
     font-weight: 600;
     color: white;
@@ -40,6 +47,10 @@ h3 {
 
 p {
     color: white;
+}
+
+#testimonial {
+    color: #48D1E0;
 }
 
 li {
@@ -220,3 +231,59 @@ img {
     color: black;
     font-weight: 500;
 }
+
+.testimonials-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 30px;
+}
+
+.testimonials-list li {
+    list-style: none;
+}
+
+form {
+    margin-top: 30px;
+    display: grid;
+    gap: 10px;
+    max-width: 400px;
+}
+
+form select,
+form input {
+    background: transparent;
+    border: 1px solid #48D1E0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+form input::placeholder {
+    color: #48D1E0;
+    opacity: 0.7;
+}
+
+form select {
+    color: #48D1E0;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #48D1E0;
+    background: transparent;
+    color: #48D1E0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+form button:hover {
+    background: #48D1E0;
+    color: black;
+}
+
